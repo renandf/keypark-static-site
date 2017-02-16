@@ -1,7 +1,7 @@
 {
-  "name": "Oleose",
+  "name": "Keypark",
   "version": "0.1.0",
-  "description": "Mobile App One Page Landing Template",
+  "description": "Keypark - Parking made easy",
   "main": "index.html",
   "dependencies": {
     "grunt": "~0.4.5",
