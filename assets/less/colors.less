@@ -1,0 +1,377 @@
+@import "styles.less"; // Custom Variables
+// Uncomment and comment variables (@base, @baseDark, @img_reviews, @img_getapp) below to change between predefined colors
+// Coloring : Change Your Base Light Color
+// Coloring : Change Your Base Dark Color
+// Freeze Theme Coloring
+// @img_reviews: "../img/freeze/bk-freeze.jpg";
+// @img_getapp: "../img/freeze/bk-freeze-ga.jpg";
+@base: #26C281;
+@baseDark: #128455; // -------------- End Freeze ---------------
+// Eco Theme Coloring
+// @img_reviews : "../img/eco/bk-eco.jpg";
+// @img_getapp : "../img/eco/bk-eco-ga.jpg";
+// @base: #66cc99;
+// @baseDark: #339999;
+// -------------- End Eco ---------------
+// Berry Theme Coloring
+// @img_reviews : "../img/berry/bk-berry.jpg";
+// @img_getapp : "../img/berry/bk-berry-ga.jpg";
+// @base: #cc6698;
+// @baseDark: #6b396c;
+// -------------- End Berry ---------------
+@lightGrey: #999999;
+@darkGrey: #666666;
+@white: #ffffff;
+@font-stack: 'Ubuntu', sans-serif;
+
+header {
+  .bk-gradient(-45deg, @base, @baseDark);
+
+  .navbar-default {
+    ul.navbar-nav {
+      li {
+        a {
+          color: @white;
+          background: none;
+
+          &.getApp {
+            border: 0;
+            background-color: @base;
+            color: @white;
+
+            &:hover {
+              border: 0;
+              background-color: lighten(@base, 10%);
+              color: @white;
+              .transitionAll;
+            }
+          }
+
+          &:hover {
+            color: @white;
+            .transitionAll;
+          }
+        }
+      }
+    }
+
+    &.scrolled {
+      border-bottom: 2px solid @base;
+
+      ul.navbar-nav {
+        li {
+          a {
+            color: @base;
+
+            &:hover {
+              color: @base;
+
+              &:after {
+                background: @base;
+              }
+            }
+
+            &.getApp {
+              color: @white;
+
+              &:hover {
+                border: 0;
+                background-color: lighten(@base, 10%);
+                color: @white;
+                .transitionAll;
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-brand {
+        background: @base;
+      }
+    }
+  }
+}
+
+section {
+  .section-heading {
+    h1 {}
+
+    .divider {
+      &:after {
+        background: @base;
+      }
+    }
+  }
+}
+
+section#about {
+  .about-item {
+    i.fa {
+      border: 2px solid @base;
+      color: @base;
+    }
+
+    &:hover {
+      i.fa {
+        color: @white;
+        background: @base;
+      }
+
+      h3 {
+        color: @base;
+      }
+    }
+  }
+}
+
+section#features {
+  background: #f6f6f6;
+
+  header {
+    h1 {
+      &:after {
+        background: @base;
+      }
+    }
+  }
+
+  .media {
+    i.fa {
+      border: 2px solid @base;
+      color: @base;
+    }
+
+    &:hover {
+      i.fa {
+        color: @white;
+        background: @base;
+      }
+
+      h3 {
+        color: @base;
+      }
+    }
+
+    &.active {
+      i.fa {
+        color: @white;
+        background: @base;
+      }
+
+      .media-heading {
+        color: @base;
+      }
+    }
+  }
+}
+
+section#reviews {
+  .bk-gradient(-45deg, @baseDark, @base);
+
+  header {
+    color: @white;
+
+    h1 {
+      &:after {
+        background: @white;
+      }
+    }
+  }
+
+  .review-filtering {
+    .review {
+      .review-person {
+        img {
+          border: 3px solid @white;
+        }
+      }
+
+      .review-comment {
+        background: @white;
+
+        h3 {
+          color: @base;
+        }
+
+        p {
+          span {
+            i {
+              color: @base;
+            }
+          }
+        }
+
+        &:after {
+          border-right-color: #ffffff;
+        }
+      }
+    }
+
+    .slick-dots {
+      li {
+        button {
+          background: @white;
+          border: 2px solid @white;
+        }
+
+        &.slick-active {
+          button {
+            background: @base;
+          }
+        }
+      }
+    }
+  }
+}
+/* Get app Section */
+section#getApp {
+  // background-color: #333;
+  .bk-gradient(-45deg, #333, #444);
+
+  header {
+    color: @white;
+
+    h1 {
+      &:after {
+        background: @white;
+      }
+    }
+  }
+
+  .platforms {
+    .media {
+      border: 2px solid @white;
+      color: @white;
+
+      a {
+        i {
+          color: @white;
+        }
+
+        div.media-body {
+          color: @white;
+        }
+      }
+
+      &:hover {
+        background: @white;
+
+        a {
+          div.media-body,
+          i {
+            color: @base;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  background-color: #CCC;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.btn {
+  &.btn-primary {
+    color: @base;
+    border-color: @base;
+
+    &:hover {
+      color: @white;
+      background: @base;
+      border-color: @base;
+    }
+
+    &.inverse {
+      color: @white;
+      border-color: @white;
+
+      &:hover {
+        color: @white;
+        background: @base;
+        border-color: @base;
+      }
+    }
+  }
+
+  &.btn-default {
+    border: 2px solid @base;
+    background-color: @base;
+    color: @white;
+
+    &:hover {
+      color: @white;
+      background-color: lighten(@base, 10%);
+      border: 2px solid lighten(@base, 10%);
+    }
+  }
+}
+
+form {
+  .form-control {
+    &:focus {
+      border-color: @base;
+      color: @lightGrey;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  header {
+    .navbar-default {
+      .navbar-toggle {
+        &:focus,
+        &:hover {
+          background: none;
+        }
+      }
+
+      ul.navbar-nav {
+        li {
+          a {
+            color: @white;
+            border-bottom: 1px solid lighten(@base, 10%);
+
+            &.getApp {
+              color: @white;
+            }
+
+            &:after {
+              display: none;
+            }
+
+            &:hover {
+              color: @base;
+            }
+          }
+        }
+      }
+
+      .navbar-collapse {
+        background: @base;
+      }
+
+      &.scrolled {
+        background: @base;
+
+        .navbar-toggle {}
+
+        ul.navbar-nav {
+          li {
+            a {
+              color: @white;
+
+              &:hover {
+                color: @base;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pre-loader {
+  background: @base;
+}
