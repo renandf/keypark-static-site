@@ -318,21 +318,32 @@ section#getApp {
     margin: 5px auto 120px;
     text-align: center;
 
-    .btn {
-      margin-right: 10px;
-      margin-bottom: 20px;
+    .btn-app {
+      vertical-align: top;
     }
   }
 
-  a {
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 10px;
+      padding: 0;
+      display: inline-block;
+    }
+  }
+
+  a.footer-link {
     color: rgba(255, 255, 255, .5);
     display: inline-block;
     .transitionAll;
   }
-  a:hover {
+  a.footer-link:hover {
     color: @white;
   }
-  a > img {
+  a.footer-link > img {
     width: 100px;
   }
 
@@ -484,6 +495,28 @@ section::before {
     .transitionAll;
   }
 }
+
+.btn-app {
+  margin: 10px;
+  display: inline-block;;
+
+  &:hover {
+    .transitionAll;
+    transform: scale(1.1);
+  }
+}
+
+.btn-app__disabled {
+  margin: 10px;
+  opacity: .25;
+  display: inline-block;
+  font-size: .85em;
+
+  & img {
+    margin-bottom: 2px;
+  }
+}
+
 
 form {
   .form-control {

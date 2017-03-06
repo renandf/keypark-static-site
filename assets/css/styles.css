@@ -127,22 +127,7 @@ section#features .media.active .media-heading {
   color: #26C281;
 }
 section#reviews {
-  background: #128455;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #128455 0%, #26C281 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #128455), color-stop(100%, #26C281));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #128455 0%, #26C281 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #128455 0%, #26C281 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #128455 0%, #26C281 100%);
-  /* IE10+ */
-  background: linear-gradient(-45deg, #128455 0%, #26C281 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#128455, endColorstr=#26C281, GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+  background: #26C281;
 }
 section#reviews header {
   color: #ffffff;
@@ -174,22 +159,7 @@ section#reviews .review-filtering .slick-dots li.slick-active button {
 }
 /* Get app Section */
 section#getApp {
-  background: #333;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #333 0%, #444 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #333), color-stop(100%, #444));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #333 0%, #444 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #333 0%, #444 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #333 0%, #444 100%);
-  /* IE10+ */
-  background: linear-gradient(-45deg, #333 0%, #444 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#333, endColorstr=#444, GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+  background-color: #333;
 }
 section#getApp header {
   color: #ffffff;
@@ -617,11 +587,20 @@ section#getApp .platforms {
   margin: 5px auto 120px;
   text-align: center;
 }
-section#getApp .platforms .btn {
-  margin-right: 10px;
-  margin-bottom: 20px;
+section#getApp .platforms .btn-app {
+  vertical-align: top;
 }
-section#getApp a {
+section#getApp .footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section#getApp .footer-links li {
+  margin: 0 10px;
+  padding: 0;
+  display: inline-block;
+}
+section#getApp a.footer-link {
   color: rgba(255, 255, 255, 0.5);
   display: inline-block;
   -webkit-transition: all 0.25s ease-in-out;
@@ -630,10 +609,10 @@ section#getApp a {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-section#getApp a:hover {
+section#getApp a.footer-link:hover {
   color: #ffffff;
 }
-section#getApp a > img {
+section#getApp a.footer-link > img {
   width: 100px;
 }
 /* support section */
@@ -779,6 +758,27 @@ section::before {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+.btn-app {
+  margin: 10px;
+  display: inline-block;
+}
+.btn-app:hover {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  transform: scale(1.1);
+}
+.btn-app__disabled {
+  margin: 10px;
+  opacity: .25;
+  display: inline-block;
+  font-size: .85em;
+}
+.btn-app__disabled img {
+  margin-bottom: 2px;
 }
 form .form-control {
   -webkit-box-shadow: none;
